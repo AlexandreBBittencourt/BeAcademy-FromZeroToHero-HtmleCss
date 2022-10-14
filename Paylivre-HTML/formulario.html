@@ -1,0 +1,35 @@
+<!--
+    Formulários
+        -> Permitem que criemos elementos de entradas de dados, como caixas de textos, botões, check boxes, etc.
+        -> Block content
+            * action: atributo que define a ação quando se interage com a opção do formulário;
+            * method:
+                * dialog: Define uma caixa de diálogo.
+                * get: Método padrão do formulário. Geralmente é utilizado para realizar buscas.
+                * post: Utilizado quando o dado a ser recebido precise ser armazenado.
+        
+            -> Fieldset: agrupa os campos do formulário de forma semântica e focada na acessibilidade
+                * name: Nome do fieldset.
+                * form: Associa o fieldset a um formulário identificado através de uma id. Não é uma boa prática.
+
+            -> Button: cria um botão.
+                * type: define o tipo do botão.
+                    - submit: dispara todo o conteúdo preenchido no formulário.
+                    - reset: limpa todos os campos do formulário.
+                    - button: tem diversas aplicações.
+-->
+
+<form action="" method="post">
+    <fieldset name="contato">
+        <legend>Preencha o formulário de contato</legend>
+    </fieldset>
+
+    <button type="button">Botão</button>
+
+    <button type="menu">Menu</button>
+
+    <button type="reset">Limpar</button>
+
+    <button type="submit">Enviar</button>
+</form>
+
