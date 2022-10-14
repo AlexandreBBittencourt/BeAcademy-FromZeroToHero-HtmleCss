@@ -17,9 +17,11 @@
                     - submit: dispara todo o conteúdo preenchido no formulário.
                     - reset: limpa todos os campos do formulário.
                     - button: tem diversas aplicações.
+            -> Label: Associa e identifica um ou mais tags de entrada de dados, ajudando muito quanto à acessibilidade.
+                * for: utilizado para fazer conexão com outros tipos de elementos de formulários.
 -->
 
-<form action="" method="post">
+<!-- <form action="" method="post">
     <fieldset name="contato">
         <legend>Preencha o formulário de contato</legend>
     </fieldset>
@@ -31,5 +33,39 @@
     <button type="reset">Limpar</button>
 
     <button type="submit">Enviar</button>
-</form>
+</form> -->
 
+<!-- <form action="" method="post">
+    <fieldset>
+        <legend>Preencha o formulário de contato</legend>
+    </fieldset>
+    <label>
+        Nome:
+        <input type="text" id="nome"><!--Como o "input" está dentro da estrutuda da "label", eles estão automaticamente conectados->
+    </label>
+
+    <label for="age">Idade:</label><!--O atributo "for" conectou a "label" ao "input" com id="age"->
+    <input type="number" id="age">
+</form>-->
+
+<form action="" method="post">
+    <fieldset>
+        <legend>Preencha o formulário de contato</legend>
+    </fieldset>
+
+    <!--
+        <daralist>
+            * Lista de valores com sugestões para algum elemento.
+            * Permite ao usuário selecionar um dos valores ou inserir novos valores
+    -->
+
+    <!--Lista de Professores-->
+    <datalist id="prof-list">
+        <option>Luan</option>
+        <option>Jenifer</option>
+        <option>Regis</option>
+    </datalist>
+
+    <input type="text" list="prof-list" placeholder="Escolha seu professor">
+
+</form>
