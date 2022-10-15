@@ -48,10 +48,10 @@
     <input type="number" id="age">
 </form>-->
 
-<form action="" method="post">
-    <fieldset>
+<!-- <form action="" method="post"> -->
+    <!-- <fieldset>
         <legend>Preencha o formulário de contato</legend>
-    </fieldset>
+    </fieldset> -->
 
     <!--
         <daralist>
@@ -60,12 +60,63 @@
     -->
 
     <!--Lista de Professores-->
-    <datalist id="prof-list">
+    <!-- <datalist id="prof-list">
         <option>Luan</option>
         <option>Jenifer</option>
         <option>Regis</option>
     </datalist>
 
-    <input type="text" list="prof-list" placeholder="Escolha seu professor">
+    <input type="text" list="prof-list" placeholder="Escolha seu professor"> -->
 
+<!-- </form> -->
+
+<form action="" method="post">
+    <fieldset>
+        <legend>Trabalhando com Inputs</legend>
+
+        <!--Input text-->
+
+        <input 
+            type="text"
+            placeholder="Preencha o seu nome"
+            size="60"
+            minlength="8"
+            maxlength="20"
+            title="De 8 a 20 caracteres"
+            required
+        >
+
+        <input 
+            type="number"
+            size="50"
+            minlength="6"
+            maxlength="12"
+            title="Preencha o dado"
+        >
+
+        <!--Input email-->
+
+        <input 
+            type="email"
+            placeholder="Informe seu e-mail"
+            size="50"
+            title="Preencha o dado"
+            required
+        >
+
+        <!--Input password-->
+
+        <input 
+            type="password"
+            placeholder="Cadastre sua senha"
+            size="50"
+            minlength="8"
+            maxlength="16"
+            title="De 8 a 16 caracteres"
+            required
+        >
+
+        <br>
+        <button type="submit">Enviar</button>
+    </fieldset>
 </form>
