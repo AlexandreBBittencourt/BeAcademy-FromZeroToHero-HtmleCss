@@ -84,7 +84,9 @@
             maxlength="20"
             title="De 8 a 20 caracteres"
             required
-        >
+        ><br>
+
+        <!--Input number-->
 
         <input 
             type="number"
@@ -92,7 +94,7 @@
             minlength="6"
             maxlength="12"
             title="Preencha o dado"
-        >
+        ><br>
 
         <!--Input email-->
 
@@ -102,19 +104,32 @@
             size="50"
             title="Preencha o dado"
             required
-        >
+        ><br>
 
         <!--Input password-->
 
         <input 
             type="password"
             placeholder="Cadastre sua senha"
-            size="50"
-            minlength="8"
-            maxlength="16"
-            title="De 8 a 16 caracteres"
+            size="25"
+            title="Sua senha precisa ser hexadecimal"
+            pattern="[0-9a-fA-F]{4,8}"
+            inputmode="numeric"
             required
-        >
+        ><br>
+
+        <!--Input hidden-->
+
+        <input type="hidden" valor="Eu estou escondido">
+
+        <!--Input color-->
+
+        <input type="color"><br>
+
+        <!--Input date, week, datetime-local, month, time, etc.-->
+
+        <input type="date"><br>
+        
 
         <br>
         <button type="submit">Enviar</button>
