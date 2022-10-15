@@ -120,7 +120,7 @@
 
         <!--Input hidden-->
 
-        <input type="hidden" valor="Eu estou escondido">
+        <input type="hidden" value="Eu estou escondido">
 
         <!--Input color-->
 
@@ -129,7 +129,49 @@
         <!--Input date, week, datetime-local, month, time, etc.-->
 
         <input type="date"><br>
+
+        <!--Input check-->
+
+        <label for="area">Seu interesse maior é por qual área?</label><br><br>
         
+        <div>
+            <input 
+            type="checkbox" 
+            name="interesse"
+            id="frontend"
+            value="Front-end - Luan Monteiro">
+            <label for="frontend">Front-end - Luan Monteiro</label><br>
+
+            <input 
+            type="checkbox"
+            name="interesse"
+            id="backend"
+            value="Back-end - Regis Santos">
+            <label for="backend">Back-end - Regis Santos</label><br>
+
+            <input 
+            type="checkbox" 
+            name="interesse"
+            id="designuiux"
+            value="Design UI/UX - Jenifer Vieira">
+            <label for="designuiux">Design UI/UX - Jenifer Vieira</label>
+        </div>
+        <!--
+            Ao definir o mesmo "name" nos "inputs", os dados serão tratados no back-end como sendo de um mesmo grupamento, sendo diferenciados por seus "id's" únicos.
+        -->
+
+        <!--Radio button-->
+
+        <h3>Deseja receber notificações da Be.Academy?</h3>
+        <input type="radio" name="notification" value="yes" id="yes" checked>
+        <label for="yes">Sim</label>
+
+        <input type="radio" name="notification" value="no" id="no">
+        <label for="no">Não</label>
+
+        <!--Neste caso é necessário informar o atributo "notification" para configurar as opções no mesmo grupamento e não seja possível selecionar "Sim" e "Não" simultaneamente, além de "value" e "id" para informar corretamente os dados ao back-end.
+        O atributo "checked" torna a opção marcada por padrãosendo necessária ação do usuário para alterar o estado.
+        -->
 
         <br>
         <button type="submit">Enviar</button>
