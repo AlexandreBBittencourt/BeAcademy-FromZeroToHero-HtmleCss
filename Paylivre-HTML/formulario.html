@@ -70,7 +70,9 @@
 
 <!-- </form> -->
 
-<form action="" method="post">
+<!--enctype="multipart/form-data"; possibilita ao formulário receber arquivos.-->
+
+<form action="" method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Trabalhando com Inputs</legend>
 
@@ -128,7 +130,7 @@
 
         <!--Input date, week, datetime-local, month, time, etc.-->
 
-        <input type="date"><br>
+        <input type="date"><br><br>
 
         <!--Input check-->
 
@@ -167,11 +169,58 @@
         <label for="yes">Sim</label>
 
         <input type="radio" name="notification" value="no" id="no">
-        <label for="no">Não</label>
+        <label for="no">Não</label><br><br>
 
         <!--Neste caso é necessário informar o atributo "notification" para configurar as opções no mesmo grupamento e não seja possível selecionar "Sim" e "Não" simultaneamente, além de "value" e "id" para informar corretamente os dados ao back-end.
         O atributo "checked" torna a opção marcada por padrãosendo necessária ação do usuário para alterar o estado.
         -->
+
+        <!--
+            Select
+                Elementod e formulário capaz de criar uma lista de oções a serem selecionadas, mais conhecidas como dropdown.
+                    size; determina quantas opções serão mostradas sem sem a necessidade de rolar a barra de opções.
+
+                    multiple; permite que o usuário selecione mais de uma opção.
+        -->
+        <label for="teacher">Professores</label>
+        <select name="select-teacher" id="teacher" size="4" multiple>
+             <option value="">Selecione um professor</option>
+             <option value="Luan Santos">Luan Santos</option>
+             <option value="Moacir Garcia">Moacir Garcia</option>
+             <option value="Jenifer Vieira">Jenifer Vieira</option>
+             <option value="Regis Eduardo">Regis Eduardo</option>
+        </select><br><br>
+
+        <!--
+            search
+                * Elemento usado para pesquisar conteúdo.
+                * Parecido com o campo "text" pode receber atributos e comportamentos.
+        -->
+
+        <input 
+            type="search"
+            name=""
+            title="Busque por id de até 3 dígitos"
+            placeholder="Busque o usuário por id"
+            size="20"
+            pattern="[0-9]{0,3}"
+            required
+        ><br><br>
+
+        <!--
+            file
+                * Utilizado para manipulação de arquivos.
+                * O usuário poderá fazer upload de um ou mais arquivos de acordo com a extensão.
+                    accept; este atributo define quais as extensões de arquivo serão aceitas.
+                    "/*"; admite todas as extensões do tipo de arquivo que o precede.
+        -->
+
+        <input 
+            type="file"
+            value="" 
+            accept=".doc, .pdf, audio/*, image/*"
+            multiple
+        ><br><br>
 
         <br>
         <button type="submit">Enviar</button>
