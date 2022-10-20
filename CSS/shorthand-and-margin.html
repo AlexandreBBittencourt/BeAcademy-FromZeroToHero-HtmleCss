@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand and Margin</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            /* background: blue; */
+            /* font-size: 48px;
+            font-weight: bold;
+            font-style: italic; todos esses atributos podem ser escritos em uma única linha, como a seguir.*/
+            font: italic 100 58px 'arial', sans-serif;
+        }
+
+        .box {
+            background: red;
+            /* margin-top: 90px;
+            margin-left: 0px;
+            margin-bottom: 30px;
+            margin-right: 300px; */
+
+            /* Margin Shorthand */
+            /* top/bottom right/left */
+            /* margin: 90px 30px; */
+
+            /* top right/left bottom */
+            /* margin: 30px 90px 30px; */
+
+            /* top right bottom left */
+            margin: 30px 300px 30px 0px;
+        }
+
+        .box-2 {
+            background: green;
+            margin: 30px 240px 30px 60px;
+        }
+
+        .box-3 {
+            background: blue;
+            margin: 30px 180px 30px 120px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Início da aula 6
+        Shorthand é um recurso para agrupar propriedades. Sendo assim, sua escrita ficará mais curta. 
+    -->
+
+    <h1>Título</h1>
+
+    <div class="box">
+        <h1>
+            Título 2
+        </h1>
+    </div>
+
+    <div class="box-2">
+        <h1>
+            Título 3
+        </h1>
+    </div>
+
+    <div class="box-3">
+        <h1>
+            Título 4
+        </h1>
+    </div>
+
+    <!-- Fim da aula 6 -->
+
+</body>
+</html>
