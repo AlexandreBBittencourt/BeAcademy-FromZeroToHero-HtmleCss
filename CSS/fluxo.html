@@ -31,7 +31,50 @@
         São as seguintes:
         
         @import: serve para incluir um CSS de terceiros;
-        
+
+        @import url("https://linkexterno.com.br/style.css");
+
+        @media: são regras condicionais para vários dispositivos;
+
+        @media (min-width: 365px) {
+
+        }
+
+        @font-face: para colocar fontes externas;
+
+        @font-face {
+
+        }
+
+        @keyframes: serve para as animações do CSS;
+
+        @keyframes animationname {
+
+        }
+
+    ****Combinadores (Combinators)****
+
+    Combinadores são utilizados para buscar e combinar seletores afim de aplicar uma estilização.
+
+    Tipos:
+
+    **Descendent combinator**
+
+    Identificado por um "espaço" entre os seletores.
+     - Busca um elemento dentro de outro.
+
+     body ul li
+
+    **Child combinator**
+
+    Identificado pelo sinal de ">" entre dois seletores.
+     - Seleciona somente o elemento filho direto do pai.
+     - Elementos depois do filho direto serão desconsiderados.
+
+    **Adjacent sibling combinator**
+
+    Identificado pelo sinal de "+" ou "~" entre dois seletores.
+     - Busca somente o elemento do lado direto que é um irmão direto da hierarquia
 
 -->
 
@@ -41,10 +84,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <!-- <link rel="stylesheet" href="./assets/style.css"> -->
     <title>Fluxo</title>
 
-    <style>
+    <!-- <style>
         h1 {
             background: blue;
         }
@@ -68,10 +111,40 @@
         .my-text strong {
             color: aqua;
         }
+    </style> -->
+
+    <!--style aula 5 CSS-->
+
+    <style>
+        /* body ul li {
+            background: green;
+            color: red;
+        }
+
+        body section div ul li {
+            background: blue;
+            color: yellow;
+        }descendent combinator */
+
+        /* body > ul {
+            background: red;
+        }
+
+        div > ul {
+            background: green;
+        }child combinator */
+
+        h1 ~ p {
+            color: green;
+            /* h1 + p: aplica a personalização apenas no elemento irmão "p" mais próximo após o "h1";
+            h1 ~ p: aplica a personalização em todos os elementos irmãos "p" após o h1.*/
+        }
+
+
     </style>
 </head>
 <body>
-    <div>
+    <!-- <div>
         <h1 id="super-title">Testando Especificidade</h1>
         <p class="my-text">
             Lorem, ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit.<br>
@@ -87,6 +160,33 @@
             At, pariatur sit inventore vel assumenda fugiat voluptas doloremque exercitationem eius expedita.<br>
             Sapiente culpa possimus laborum asperiores.
         </p>
+    </div> -->
+
+    <!--Fim da aula 4 de CSS-->
+    <!--Aula 5 de CSS-->
+
+    <div>
+        <p>Teste</p>
     </div>
+    <ul>
+        <li>Testando combinadores</li>
+    </ul>
+    <div>
+        Outro Formato
+    </div>
+    <section>
+        <div>
+            <ul>
+                <li>Outro marcador</li>
+            </ul>
+        </div>
+    </section>
+    <h1>Título</h1>
+    <p>Mais um parágrafo</p>
+
+    <button>Enviar</button>
+
+    <p>Outro parágrafo</p>
+    <!-- Fim da aula 5 -->
 </body>
 </html>
