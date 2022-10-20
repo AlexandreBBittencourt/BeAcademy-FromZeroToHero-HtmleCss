@@ -3,7 +3,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap'); /*Com o @import foi possível importar um estilo de fonte de um outro site.*/
 
 h1  {
-    background: blue;
-    color: red;
-    padding: 10px;
+    background: yellow;
 }

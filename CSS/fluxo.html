@@ -1,0 +1,92 @@
+<!--
+    O navegador determina qual aplicar e como aplicar caso haja diversas regras para o mesmo elemento.
+
+    * O fluxo de leitura de sua folha de estilo é de cima para baixo.
+
+    ****IMPORTANTE CONSIDERAR****
+
+    1. Origem da folha de estilo
+    2. Especificidade
+    3. Importância
+
+    ****TIPOS DE ESTILOS****
+
+    inline > tag stile > tag link
+
+    * Especificidade
+
+    Cálculo matemático desenvolvido automaticamente pela regra CSS, onde cada tipo de seletor e origem do estilo possuem valores a serem considerados.
+
+    0. Universal Selector, combinator e pseudo-class (:not());
+    1. Elementos do tipo seletor e pseudo-elementos (::before, ::after);
+    10. Classes e atributos de seletores ([type="radio"]);
+    100. Seletor ID;
+    1000. Inline
+
+    ___________________________________________________________
+
+    #At-rules
+        São regras relacionadas ao comportamento do CSS. Começa com um sinal de "@" seguido pelo identificador e valor.
+
+        São as seguintes:
+        
+        @import: serve para incluir um CSS de terceiros;
+        
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Fluxo</title>
+
+    <style>
+        h1 {
+            background: blue;
+        }
+
+        #super-title {
+            background: red;
+        }
+
+        h1 {
+            background: green;
+        }
+
+        .my-title-2 {
+            background: yellow;
+        }
+
+        strong {
+            color: purple;
+        }
+
+        .my-text strong {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="super-title">Testando Especificidade</h1>
+        <p class="my-text">
+            Lorem, ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit.<br>
+            Explicabo animi voluptatum iusto totam minima inventore quisquam dignissimos ullam asperiores, officiis doloremque ipsum praesentium omnis quia voluptas dolore ratione harum distinctio.
+        </p>
+    </div>
+
+    <div>
+        <h1 class="my-title-2">Testando Especificidade</h1>
+        <p class="my-text-2">
+            Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit.<br>
+            Totam beatae veniam rerum tempora!<br>
+            At, pariatur sit inventore vel assumenda fugiat voluptas doloremque exercitationem eius expedita.<br>
+            Sapiente culpa possimus laborum asperiores.
+        </p>
+    </div>
+</body>
+</html>
