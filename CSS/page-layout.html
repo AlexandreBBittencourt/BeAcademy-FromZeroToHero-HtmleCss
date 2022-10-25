@@ -1,0 +1,69 @@
+<!--Início da aula 10 parte 1-->
+
+<!--
+    Documentação:
+
+    https://www.w3schools.com/css/css_website_layout.asp
+
+    História do CSS e Page Layout
+
+    1 - Tables
+    https://www.w3schools.com/html/html_tables.asp
+
+    2 - Floats e Clear
+    https://www.w3schools.com/css/css_float.asp
+    https://www.w3schools.com/css/css_floar_clear.asp
+
+    3 - Frameworks e Grid Systems
+    https://getbootstrap.com/docs/5.1/examples/
+    https://tailwindcss.com/docs/drid-template-columns
+
+    4 - Flexbox
+    https://www.w3schools.com/css/css3_flexbox.asp
+
+    5 - Grid
+    https://www.w3schools.com/css/css_grid.asp
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+
+        .box {
+            width: 5.0rem;
+            height: 5.0rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .box-1 {
+            background: red;
+        }
+
+        .box-2 {
+            background: green;
+        }
+
+        .box-3 {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</body>
+</html>
+
+<!--
+    O que acontece na declaração class="box box-1" é chamado de herança de classes. Dessa forma, quando foi personalizada a classe "box" com as dimensões 5x5rem, todas as "div" herdaram os parâmetros, pois a classe "box" é "pai" de todas elas.
+-->

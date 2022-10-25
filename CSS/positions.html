@@ -1,0 +1,99 @@
+<!--
+    Início da aula 10 parte 2
+
+    PROPRIEDADE DE POSIÇÃO
+
+    A propriedade "position" especifica o tipo de método de posicionamento utilizado para um elemento.
+
+    Existem cinco valores de posições diferentes:
+
+    * static (configurado por padrão)
+
+    * relative (desloca o elemento, porém mantém a posição original, que não será ocupada por outro elemento)
+
+    * fixed (fixa o elemento em um determinado ponto de forma que ele se manterá no mesmo local mesmo rolando a barra de rolagem, mantendo-se sobreposto aos elementos que passam por ele)
+
+    * absolute (faz com que o elemento sobreponha-se aos outros elementos dentro do mesmo compartimento, sendo relativo ao elemento "pai" configurado como position: "relative"; ou ao elemento "pai" maior ("body", por exemplo) caso não haja configuração expressa.)
+
+    * sticky
+
+    Os elementos são então posicionados usando as propriedades superior, inferior, esquerda e direita. No entanto, essas propriedades não funcionarão a menos que a propriedade "position" seja definida primeiro. Elas também funcionam de forma diferente dependendo do valor da posição.
+
+    Exemplo:
+    
+    .box {
+        position: relative;
+        top:
+        left:
+        right:
+        bottom:
+        z-index:
+    }
+
+    Element Stacking - empilhamento utilizando o elemento "z-index"
+
+    Obs.: A camada mais alta do "z-index" ficará no topo, sobrepondo a todas as outras.
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+
+        /* main {
+            position: relative;
+            background: yellow;
+            margin-top: 5.0rem;
+        } */
+
+        .box {
+            width: 5.0rem;
+            height: 5.0rem;
+            /* margin-bottom: 50.0rem; */
+            margin-bottom: 2.0rem;
+        }
+
+        .box-1 {
+            background: red;
+            position: absolute;
+            left: 0.5rem;
+            top: 1.0rem;
+            z-index: 3;
+            /* position: fixed; */
+            /* left: 5.0rem; */
+            /* top: 2.0rem; */
+        }
+
+        .box-2 {
+            background: green;
+            position: absolute;
+            left: 1.0rem;
+            top: 1.5rem;
+            z-index: 5;
+        }
+
+        .box-3 {
+            background: blue;
+            position: absolute;
+            left: 1.5rem;
+            top: 2.0rem;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+    </main>
+</body>
+</html>
