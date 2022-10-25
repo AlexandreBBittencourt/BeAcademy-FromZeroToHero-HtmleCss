@@ -1,0 +1,62 @@
+<!--
+    Início aula 8
+
+    integer: números inteiros, como -10 ou 233;
+    
+    number: números reais como -2.4, 64 ou 0.234;
+
+    dimension: é um <number> acompanhado de uma unidade, como 90deg, 2s ou 8px;
+
+    percentage: representa uma fração de outro número, como 50%.
+
+    Unidades comuns:
+
+    length: é uma das mais usadas no CSS e representa uma distância: px, em, vw;
+
+    angle: representa um ângulo em deg (graus), rad (radianos - 2rad = 360deg), turn (1turn = 360deg);
+
+    time: representa tempo: s, ms;
+
+    resolution: representa resoluções para dispositivos: dpi.
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidade de medida</title>
+
+    <style>
+        :root {
+            font-size: 18px;
+        }
+
+        .card {
+            text-align: justify;
+            font-size: 48px;
+        }
+
+        .text-box {
+            /* font-size: 1.4rem;*//*26px/18 = 1.4rem (referente à "root", por isso divide-se o "font-size" por 18). Logo 1.4rem equivale a 26px.*/
+            /* margin-top: 1.7rem;*//*32px/18 = 1.7px */
+            font-size: 0.5em;/*24/48 = 0.5em (referente ao elemento pai "card", por isso divide-se o "font-size" por 48)*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="card">
+                    <h2>Artigo sobre Unidades</h2>
+                    <p class="text-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, optio assumenda. Ratione dicta veritatis vero labore velit deleniti quas tempore, debitis praesentium, est blanditiis excepturi, accusamus exercitationem. Ea, commodi recusandae.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+
+<!--Fim da aula 8-->

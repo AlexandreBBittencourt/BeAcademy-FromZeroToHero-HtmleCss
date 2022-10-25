@@ -1,0 +1,51 @@
+<!--
+    Auxiliar aula 8
+
+    Distâncias absolutas <lenght>
+    São fixas e não alteram seu valor
+
+    | Unidade  | Nome               | Equivalência         |
+    |----------|--------------------|----------------------|
+    | cm       | Centímetros        | 1cm = 96px/2.54      |
+    | in       | Inches (Polegadas) | 1in = 2.54cm = 96px  |
+    | px       | Pixels             | 1px = 1/96th of 1in  |
+
+    * o mais utilizado é o px
+    * não é recomendado utilizar cm
+
+    Distâncias relativas
+
+    São relativas a um outro valor, pode ser o elemento pai, root ou o tamanho da tela.
+    Benefício: maior adaptação aos diferentes tipos de tela.
+
+    | Unidade  | Relativo a                                       |
+    |----------|--------------------------------------------------|
+    | em       | Tamanho da "font" do elemento pai                |
+    | rem      | Tamanho da "font" do elemento raiz (root/html)   |
+    | vw       | 1% do "viewport width"                           |
+    | vh       | 1% do "viewport heigth"                          |
+
+    :root {
+        font-size: 18px;
+    }
+
+    /* OU */
+
+    html {
+        font-size: 18px;
+    }
+
+    Documentação: https://www.w3.org/Style/Example/007/units.pt_BR.html
+    Documentação MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+    Dica do Professor 1:
+
+    Quando trabalhamos com designs responsivos, ou seja, layouts flexíveis que se adaptam a qualquer tipo de tela, é interessante utilizar a unidade "rem".
+
+    User agente (Browser), boa parte deles, usam o "font-size: 16px;"
+
+    Como converter "px" para "rem"
+    Valor em "px" / valor da "font" do user agent
+
+    Ex.: 32px / 16px = 2rem
+-->
