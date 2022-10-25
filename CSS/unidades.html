@@ -20,7 +20,7 @@
     resolution: representa resoluções para dispositivos: dpi.
 -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,7 @@
         .text-box {
             /* font-size: 1.4rem;*//*26px/18 = 1.4rem (referente à "root", por isso divide-se o "font-size" por 18). Logo 1.4rem equivale a 26px.*/
             /* margin-top: 1.7rem;*//*32px/18 = 1.7px */
-            font-size: 0.5em;/*24/48 = 0.5em (referente ao elemento pai "card", por isso divide-se o "font-size" por 48)*/
+            font-size: 0.5em;24/48 = 0.5em (referente ao elemento pai "card", por isso divide-se o "font-size" por 48)
         }
     </style>
 </head>
@@ -57,6 +57,61 @@
         </section>
     </main>
 </body>
-</html>
+</html> -->
 
 <!--Fim da aula 8-->
+
+<!--Início da aula 9-->
+
+<!--
+    Dica do Professor 1:
+
+    Quando trabalhamos com designs responsivos, ou seja, layouts flexíveis que se adaptam a qualquer tipo de tela, é interessante utilizar a unidade "rem".
+
+    User agente (Browser), boa parte deles, usam o "font-size: 16px;"
+
+    Como converter "px" para "rem"
+    Valor em "px" / valor da "font" do "user agent"
+
+    Ex.: 32px / 16px = 2rem
+
+    
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            margin-bottom: 6.4rem;
+        }
+
+        p {
+            margin-top: 3.2rem;
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="card">
+                    <h2>Artigo sobre Unidades</h2>
+                    <p class="text-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora aliquam ipsa ipsum, voluptates ipsam provident magni culpa? Repellat deserunt nemo ea tenetur optio aut, aspernatur, quos voluptates, fuga fugit praesentium?</p>teste
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -48,4 +48,62 @@
     Valor em "px" / valor da "font" do user agent
 
     Ex.: 32px / 16px = 2rem
+
+    Dica do Professor 2:
+
+    Outra possibilidade é mudar a configuração do "User Agent" de 16px para 10px, usando "%" e utilizando a Regra de 3 matemática, desta forma conseguimos cravar a unidade em "rem".
+
+    Transformar o "user agent" de 16px para 10px em "%"
+
+    User Agent = 16px = 100%
+
+    10*100 = 1000
+    1000/16 = 62,5%
+
+    :root {
+        font-size: 62,5%;
+    }
 -->
+
+<!--Início da aula 9-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9</title>
+
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            margin-bottom: 6.4rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            text-align: justify;
+            margin-top: 3.2rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="card">
+                    <h2>Designs Responsivos</h2>
+                    <p class="text-box">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quam doloremque illum ipsum, natus magnam consequuntur a exercitationem reiciendis quos, adipisci eveniet accusantium cum, quo porro totam officiis pariatur et!
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
