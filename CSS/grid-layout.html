@@ -1,0 +1,84 @@
+<!--Início da aula 12-->
+
+<!--
+    Grid Layout
+
+    O CSS Grid Layout Module oferece um sistema de layout baseado em colunas, facilitando o design de páginas web sem a necessidade de usar floats e posicionamento.
+
+    Principais declarações:
+
+    display: grid;
+    grid-template-area: ; (define a quantidade de áreas afetadas(linha e coluna))
+    grid-template-rows: ; (define o tamanho das linhas (fixas ou flexíveis))
+    grid-template-columns: ; (define o tamanho das colunas (fixas ou flexíveis))
+    grid-area: ; (define qual elemento será atribuído ao "grid")
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Esta estrutura tem a finalidade de "limpar" os padrões do "User Agent". */
+        }
+
+        :root {
+            font-size: 62.5%;
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer";
+            grid-template-rows: 6.4rem 1fr 6.4rem;
+            grid-template-columns: 1fr 1fr;
+            /* Ao utilizar a unidade de medida "fr", o dimensionamento ocorre de forma automática. */
+        }
+
+        header, footer, aside, main {
+            font-size: 2.4rem;
+        }
+
+        header {
+            background: red;
+            grid-area: header;
+        }
+
+        main {
+            background: blue;
+            grid-area: main;
+        }
+
+        aside {
+            background: green;
+            grid-area: aside;
+        }
+
+        footer {
+            background: yellow;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <header>Topo</header>
+    <main>
+        Conteúdo
+    </main>
+    <aside>
+        Barra Lateral
+    </aside>
+    <footer>Rodapé</footer>
+</body>
+</html>
