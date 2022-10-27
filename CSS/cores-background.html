@@ -1,0 +1,116 @@
+<!--Início da aula 12-->
+
+<!--
+    Trabalhando com cores
+
+    *** Onde posso mudar cores no CSS? ***
+
+    - background-color: ; (para caixas)
+    - color: ; (para textos)
+    - border-color: ; (para bordas de caixas)
+    - entre outros...
+
+    *** Quais são os valores para atribuir? ***
+
+    - palavras (blue, red, white, orange, transparent, etc.)
+    - valores hexadecimais (#fff321)
+    - funções (rgb, hsl, rgba, hsla, etc.)
+
+    Autonomia:
+
+    Hexadecimal
+
+    #FF0000 (2 primeiros dígitos RED)
+    #00FF00 (Próximos 2 dígitos GREEN)
+    #0000FF (2 últimos dígitos BLUE) (0 ~ 9 e A ~ F)
+
+    RGB
+
+    rgb(255,0,0) - RED
+    rgb(0,255,0) - GREEN
+    rgb(0,0,255) - BLUE
+
+    RGBA
+
+    rgba(255,0,0,0.3) - RED Opacity (Opacidade)
+    rgba(0,255,0,0.3) - GREEN Opacity (Opacidade)
+    rgba(0,0,255,0.3) - BLUE Opacity (Opacidade)
+
+    HSL
+
+    hsl (hue, saturation, lightness)
+        hue -> define um grau de cores (de 0 a 360) - 0 ou 360 é vermelho, 120 é verde e 240 é azul
+        saturation -> define a saturação. 0% é um tom de cinza e 100% é a "cor total" (saturação total).
+        lightness -> define a suavidade. 0 é preto, 50% é normal e 100% é branco.
+
+    hsl(360,100%,50%) - vermelho normal
+    hsl(360,100%,75%) - vermelho claro
+    hsl(360,100%,25%) - vermelhor escuro
+    hsl(360,40%,70%) - vermelho pastel
+
+    HSLA
+
+    hsla (hue, saturation, lightness, alpha)
+        alpha -> define a opacidade como um número entre 0.0 (totalmente transparente) e 1.0 (totalmetne opaco).
+    
+    hsla(360,100%,50%,0.3) - vermelho normal com opacidade
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background and Color</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+            /* height: 100vh; */
+            /* background: #620b94; */
+            /* background: rgb(7, 180, 51); */
+            /* background: rgba(360,0,0,0.7); */
+            /* background: hsla(128,90%,50%,0.6); */
+        }
+
+        :root {
+            font-size: 62.5%;
+        }
+
+        .bg-box {
+            width: 60.0rem;
+            height: 60.0rem;
+            border: 0.8rem #000 dotted;/*shorthand*/
+            background: #ff12ff;
+            padding: 1.6rem;
+
+            /*Imagem de fundo*/
+            background-image: url(https://source.unsplash.com/random);
+            background-size: 30%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-origin: content-box;
+            /* background-attachment: fixed; */
+            /* background: linear-gradient(rgba(0,90,0,1),rgba(0,90,0,0.2)); */
+            background: radial-gradient(rgba(0,90,0,1),rgba(0,90,0,0.2));
+
+            /*SUPERCOMBO COMBO - Shorthand*/
+
+            background: linear-gradient(rgba(0,90,0,1),rgba(0,90,0,0.1)), url("https://source.unplash.com/random") no-repeat center center / 50% content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Testando Backgrounds</h1>
+        <div class="bg-box"></div>
+    </div>
+</body>
+</html>
+
+<!--Fim da aula 12-->
