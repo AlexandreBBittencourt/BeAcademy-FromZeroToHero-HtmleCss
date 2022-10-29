@@ -24,7 +24,7 @@ body p:nth-child(1) {
     color: blue;
 } */
 
-ul li:nth-child(even) {
+/* ul li:nth-child(even) {
     background: yellow;
     color: green;
 }
@@ -32,4 +32,46 @@ ul li:nth-child(even) {
 ul li:nth-child(odd) {
     background: black;
     color: red;
+} */
+/*Aula 16*/
+
+.btn-submit {
+    padding: 1.2rem;
+    color: white;
+    background: rgb(000,111,215);
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.btn-submit:hover {
+    background: rgb(1, 99, 190);
+}
+
+.btn-submit:focus {
+    background: green;
+}
+
+input[type=text] {
+    /* background: rgb(236, 241, 240); */
+    border: 0.1rem solid #f2f2f2;
+    border-radius: 0.4rem;
+    margin-bottom: 0.8rem;
+    padding: 1.2rem;
+    outline: none;
+    transition: .2s;
+}
+
+input[type=text]:hover {
+    /* background: rgb(182, 224, 230); */
+    border: 0.1rem solid rgb(0 ,111,215);
+}
+
+input[type=text]:disabled {
+    background: rgba(255, 59, 59, 0.575);
+}
+
+input[type=text]:disabled::placeholder {
+    color: white;
 }
