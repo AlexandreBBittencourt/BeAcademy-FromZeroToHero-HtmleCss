@@ -75,3 +75,33 @@ input[type=text]:disabled {
 input[type=text]:disabled::placeholder {
     color: white;
 }
+
+/* stylesheet aula 17 */
+
+ul {
+    position: relative;
+}
+
+ul li::after {
+    content: '';
+    background: red;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 14.0rem;
+}
+
+ul li::before {
+    content: '';
+    background: blue;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+
+p::first-line {
+    color: red;
+}
