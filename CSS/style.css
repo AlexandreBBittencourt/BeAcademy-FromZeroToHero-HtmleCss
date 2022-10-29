@@ -1,0 +1,35 @@
+/*Aula 15 - stylesheet*/
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2.0rem;
+}
+/* ul li {
+    color: blue;
+    font-size: 2.3rem;
+}
+
+ul p:first-child {
+    color: red;
+} */
+
+/* body p:nth-of-type(2) {
+    color: red;
+    font-size: 2.4rem;
+}
+
+body p:nth-child(1) {
+    color: blue;
+} */
+
+ul li:nth-child(even) {
+    background: yellow;
+    color: green;
+}
+
+ul li:nth-child(odd) {
+    background: black;
+    color: red;
+}
